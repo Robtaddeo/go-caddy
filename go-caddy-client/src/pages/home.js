@@ -95,6 +95,7 @@ export default function Home() {
 						</Grid>
 						<Grid item md={7}>
 							<img
+								style={{float: 'right'}}
 								width="100%"
 								src="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/96361BentoBox-hero-lilia.png?w=1300&fit=max&auto=compress,format"
 							/>
