@@ -2,15 +2,13 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
 	card: {
-		maxWidth: 400,
+		width: '100%',
 		textAlign: 'center',
 		boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
 	},
@@ -27,10 +25,10 @@ const useStyles = makeStyles({
 		fontWeight: 'bold',
 		fontSize: '14px',
 		letterSpacing: 1,
-		fontWeight: '900'
+		fontWeight: '700'
 	},
 	cardTitle: {
-		fontWeight: '700',
+		fontWeight: '500',
 		fontSize: '2.5rem'
 	},
 	cardInfo: {

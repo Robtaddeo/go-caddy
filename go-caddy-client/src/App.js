@@ -17,7 +17,7 @@ import Navbar from './components/Navbar';
 
 const theme = createMuiTheme({
 	typography: {
-		fontFamily: [ 'Lato', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif' ].join(',')
+		fontFamily: [ 'Rubik', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif' ].join(',')
 	}
 });
 

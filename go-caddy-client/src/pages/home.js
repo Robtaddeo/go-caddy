@@ -9,12 +9,15 @@ import PlayArrow from '@material-ui/icons/PlayArrow';
 
 const useStyles = makeStyles((theme) => ({
 	gradientBackground: {
-		paddingTop: '100px',
-		backgroundImage: 'linear-gradient(white 10%, #fbe9e7)'
+		backgroundImage: 'linear-gradient(white , #fbe9e7)',
+		marginBottom: 200,
+		marginTop: 125
 	},
-	container: {
-		maxWidth: 1300,
-		padding: '0 0 0 20px',
+	secondGradient: {
+		backgroundImage: 'linear-gradient(white, #fbe9e7 50%, white)'
+	},
+	heroTextContainer: {
+		width: '70%',
 		marginBottom: 100,
 		marginLeft: 'auto',
 		marginRight: 'auto'
@@ -26,15 +29,13 @@ const useStyles = makeStyles((theme) => ({
 		paddingRight: '20px'
 	},
 	heroText: {
-		marginRight: 'auto',
-		marginLeft: 'auto',
 		marginTop: '75px',
 		marginBottom: '20px',
 		paddingTop: '20px',
 		paddingBottom: '20px',
 		lineHeight: 1,
 		fontSize: '4.5em',
-		fontWeight: '900'
+		fontWeight: '700'
 	},
 	landingText: {
 		width: '75%',
@@ -63,11 +64,28 @@ const useStyles = makeStyles((theme) => ({
 		marginBottom: 50
 	},
 	testimonialTitle: {
-		fontWeight: '700'
-    },
-    playButtonSm: {
-        width: '5px',
-    }
+		width: '90%',
+		paddingTop: '12%',
+		marginLeft: 'auto',
+		fontWeight: '500',
+		fontSize: '3vw'
+	},
+	testimonialSubTitle: {
+		width: '90%',
+		marginTop: 'auto',
+		marginBottom: 'auto',
+		marginLeft: 'auto',
+		fontWeight: '500',
+		fontSize: '1.3vw',
+		letterSpacing: 0.5
+	},
+	playButtonSm: {
+		boxShadow: 'none',
+		backgroundColor: '#ef5350'
+	},
+	heroImage: {
+		justifyContent: 'flex-end'
+	}
 }));
 
 export default function Home() {
@@ -78,24 +96,27 @@ export default function Home() {
 				<div className={classes.container}>
 					<Grid container>
 						<Grid item md={5}>
-							<Typography variant="h2" className={classes.heroText}>
-								Own your <br />golf course <br /> - <span style={{ color: '#ef5350' }}> online.</span>
-							</Typography>
-							<Typography variant="body1" className={classes.landingText}>
-								Get every golf course website feature you need and more. All in one place.
-							</Typography>
-							<br />
-							<div className={classes.buttonContainer}>
-								<Link to={'/demo'}>
-									<Fab variant="extended" color="primary" className={classes.demobtn}>
-										Get a Demo
-									</Fab>
-								</Link>
+							<div className={classes.heroTextContainer}>
+								<Typography variant="h2" className={classes.heroText}>
+									Own your <br />golf course <br /> -{' '}
+									<span style={{ color: '#ef5350' }}> online.</span>
+								</Typography>
+								<Typography variant="body1" className={classes.landingText}>
+									Get every golf course website feature you need and more. All in one place.
+								</Typography>
+								<br />
+								<div className={classes.buttonContainer}>
+									<Link to={'/demo'}>
+										<Fab variant="extended" color="primary" className={classes.demobtn}>
+											Get a Demo
+										</Fab>
+									</Link>
+								</div>
 							</div>
 						</Grid>
-						<Grid item md={7}>
+						<Grid item md={7} style={{ display: 'flex' }}>
 							<img
-								style={{float: 'right'}}
+								className={classes.heroImg}
 								width="100%"
 								src="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/96361BentoBox-hero-lilia.png?w=1300&fit=max&auto=compress,format"
 							/>
@@ -103,17 +124,18 @@ export default function Home() {
 					</Grid>
 				</div>
 			</div>
+			<div className={classes.secondGradient}>
 			<div className={classes.cards}>
 				<Grid container spacing={3}>
-					<Grid item xs={4}>
+					<Grid item sm={4}>
 						<CustomCard
 							img="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/37072websites-home.jpg?w=1024&fit=max&auto=compress,format"
 							slogan="own your presence"
 							title="Website Design"
-							info="Make your first impression"
+							info="Grow margins with ordering, gift card, events and more"
 						/>
 					</Grid>
-					<Grid item xs={4}>
+					<Grid item sm={4}>
 						<CustomCard
 							img="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/47989commerce-home3.jpg?w=1024&fit=max&auto=compress,format"
 							slogan="own your profits"
@@ -121,7 +143,7 @@ export default function Home() {
 							info="Grow margins with ordering, gift card, events and more"
 						/>
 					</Grid>
-					<Grid item xs={4}>
+					<Grid item sm={4}>
 						<CustomCard
 							img="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/19551support-home.jpg?w=1024&fit=max&auto=compress,format"
 							slogan="own your connections"
@@ -130,18 +152,31 @@ export default function Home() {
 						/>
 					</Grid>
 				</Grid>
-				<Grid container spacing={2} className={classes.testimonal}>
-					<Grid item md={6}>
-						<Typography variant="h3" className={classes.testimonialTitle} component="h3">
-							GetCaddy empowers golf courses to succeed
-						</Typography>
-						<Typography variant="body1" className={classes.testimonialTitle} component="p">
-							<Fab size="small" color="secondary" className={classes.playButtonSm}>
-                                
-                            </Fab>
-						</Typography>
-					</Grid>
+			</div>
+			<Grid container spacing={0} className={classes.testimonal}>
+				<Grid item md={6}>
+					<Typography variant="h4" className={classes.testimonialTitle} component="h4">
+						GoCaddy empowers <br /> golf courses to succeed
+					</Typography><br/>
+					<Typography variant="body2" className={classes.testimonialSubTitle} component="p">
+						<img
+							src="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/62467playbutton-large.svg?w=40&fit=max&auto=compress,format" 
+							alt="play-btn"
+							width="30vw"
+							style={{marginRight: 15, float:'left'}}
+						/>	
+						Hear From Our Customers
+					</Typography>
 				</Grid>
+				<Grid item md={6}>
+					<img
+						style={{ float: 'right' }}
+						width="100%"
+						src="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/91910bento-video.jpg?w=1800&fit=max&auto=compress,format"
+						alt="testimonial"
+					/>
+				</Grid>
+			</Grid>
 			</div>
 		</div>
 	);
