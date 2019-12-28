@@ -6,6 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import CustomCard from '../components/CustomCard';
 import PlayArrow from '@material-ui/icons/PlayArrow';
+import NumberTile from '../components/NumberTile';
+import SplitCard from '../components/SplitCard';
 
 const useStyles = makeStyles((theme) => ({
 	gradientBackground: {
@@ -25,6 +27,14 @@ const useStyles = makeStyles((theme) => ({
 	cards: {
 		maxWidth: 1300,
 		margin: '50px auto auto auto',
+		paddingLeft: '20px',
+		paddingRight: '20px'
+	},
+	numberStats: {
+		maxWidth: 1300,
+		marginRight: 'auto',
+		marginLeft: 'auto',
+		marginBottom: 50,
 		paddingLeft: '20px',
 		paddingRight: '20px'
 	},
@@ -61,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	testimonal: {
 		marginTop: 100,
-		marginBottom: 50
+		marginBottom: 100
 	},
 	testimonialTitle: {
 		width: '90%',
@@ -85,6 +95,14 @@ const useStyles = makeStyles((theme) => ({
 	},
 	heroImage: {
 		justifyContent: 'flex-end'
+	},
+	testimonalCard: {
+		textAlign: 'center',
+        display: 'flex',
+        width: '90%',
+        marginRight: 'auto',
+		marginLeft: 'auto',
+		marginBottom: 50
 	}
 }));
 
@@ -92,8 +110,10 @@ export default function Home() {
 	const classes = useStyles();
 	return (
 		<div className={classes.mainContainer}>
+			{/* Gradient Background */}
 			<div className={classes.gradientBackground}>
 				<div className={classes.container}>
+					{/* Hero Content */}
 					<Grid container>
 						<Grid item md={5}>
 							<div className={classes.heroTextContainer}>
@@ -124,59 +144,78 @@ export default function Home() {
 					</Grid>
 				</div>
 			</div>
+			{/* Cards / Gradient for Cards + Customer Testimonail */}
 			<div className={classes.secondGradient}>
-			<div className={classes.cards}>
-				<Grid container spacing={3}>
-					<Grid item sm={4}>
-						<CustomCard
-							img="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/37072websites-home.jpg?w=1024&fit=max&auto=compress,format"
-							slogan="own your presence"
-							title="Website Design"
-							info="Grow margins with ordering, gift card, events and more"
-						/>
+				<div className={classes.cards}>
+					<Grid container spacing={3}>
+						<Grid item sm={4}>
+							<CustomCard
+								img="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/37072websites-home.jpg?w=1024&fit=max&auto=compress,format"
+								slogan="own your presence"
+								title="Website Design"
+								info="Grow margins with ordering, gift card, events and more"
+							/>
+						</Grid>
+						<Grid item sm={4}>
+							<CustomCard
+								img="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/47989commerce-home3.jpg?w=1024&fit=max&auto=compress,format"
+								slogan="own your profits"
+								title="Commerce"
+								info="Grow margins with ordering, gift card, events and more"
+							/>
+						</Grid>
+						<Grid item sm={4}>
+							<CustomCard
+								img="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/19551support-home.jpg?w=1024&fit=max&auto=compress,format"
+								slogan="own your connections"
+								title="Tools & Services"
+								info="Get full-service support, integrations and analytics anytime you need it"
+							/>
+						</Grid>
 					</Grid>
-					<Grid item sm={4}>
-						<CustomCard
-							img="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/47989commerce-home3.jpg?w=1024&fit=max&auto=compress,format"
-							slogan="own your profits"
-							title="Commerce"
-							info="Grow margins with ordering, gift card, events and more"
-						/>
+				</div>
+				{/* Customer Testimonial */}
+				<Grid container spacing={0} className={classes.testimonal}>
+					<Grid item md={6}>
+						<Typography variant="h4" className={classes.testimonialTitle} component="h4">
+							GoCaddy empowers <br /> golf courses to succeed
+						</Typography>
+						<br />
+						<Typography variant="body2" className={classes.testimonialSubTitle} component="p">
+							<img
+								src="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/62467playbutton-large.svg?w=40&fit=max&auto=compress,format"
+								alt="play-btn"
+								width="30vw"
+								style={{ marginRight: 15, float: 'left' }}
+							/>
+							Hear From Our Customers
+						</Typography>
 					</Grid>
-					<Grid item sm={4}>
-						<CustomCard
-							img="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/19551support-home.jpg?w=1024&fit=max&auto=compress,format"
-							slogan="own your connections"
-							title="Tools & Services"
-							info="Get full-service support, integrations and analytics anytime you need it"
-						/>
-					</Grid>
-				</Grid>
-			</div>
-			<Grid container spacing={0} className={classes.testimonal}>
-				<Grid item md={6}>
-					<Typography variant="h4" className={classes.testimonialTitle} component="h4">
-						GoCaddy empowers <br /> golf courses to succeed
-					</Typography><br/>
-					<Typography variant="body2" className={classes.testimonialSubTitle} component="p">
+					<Grid item md={6}>
 						<img
-							src="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/62467playbutton-large.svg?w=40&fit=max&auto=compress,format" 
-							alt="play-btn"
-							width="30vw"
-							style={{marginRight: 15, float:'left'}}
-						/>	
-						Hear From Our Customers
-					</Typography>
+							style={{ float: 'right' }}
+							width="100%"
+							src="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/91910bento-video.jpg?w=1800&fit=max&auto=compress,format"
+							alt="testimonial"
+						/>
+					</Grid>
 				</Grid>
-				<Grid item md={6}>
-					<img
-						style={{ float: 'right' }}
-						width="100%"
-						src="https://images.getbento.com/accounts/c831ea07f62fba23e7ea35e6b0f1c013/media/images/91910bento-video.jpg?w=1800&fit=max&auto=compress,format"
-						alt="testimonial"
-					/>
+				{/* Numbers Content */}
+				<Grid container className={classes.numberStats}>
+					<Grid item sm={4}>
+						<NumberTile stat="70%" fact="more website traffic" />
+					</Grid>
+					<Grid item sm={4}>
+						<NumberTile stat="7x" fact="more website conversion" />
+					</Grid>
+					<Grid item sm={4}>
+						<NumberTile stat="5x" fact="ROI for each website" />
+					</Grid>
 				</Grid>
-			</Grid>
+				{/* Review Card */}
+				<div className={classes.testimonalCard}>
+					<SplitCard  />
+				</div>
 			</div>
 		</div>
 	);
