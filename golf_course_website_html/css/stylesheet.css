@@ -1,0 +1,49 @@
+header{
+  width: 100%;
+  height: 90px;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  font-weight: 400;
+}
+
+/*
+header a img{
+  height: 100px;
+  margin-left: 50px;
+}
+*/
+body {
+  background-color: white;
+  margin: 0;
+}
+
+nav{
+  display: flex;
+  width: 60%;
+  margin-left: 50px;
+}
+
+.navBar{
+  background-color: white;
+  height: 50px;
+	width:135px;
+	border-right:1px solid black;
+	transition: background-color 0.7s ease;
+	}
+
+.navBar a {
+	display:block;
+	text-align:center;
+	margin-top:15px;
+  text-decoration: none;
+  color: black;
+	}
+
+.navBar:hover {
+	background-color: #4D4D4D;
+}
