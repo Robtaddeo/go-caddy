@@ -1,0 +1,28 @@
+.card-container h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 2%;
+}
+
+.carousel-caption {
+    bottom: 50%;
+}
+
+.carousel-caption h3 {
+    font-size: 15vh;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.card-component {
+    border: 0px;
+    border-radius: 2%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0), 0 1px 2px rgba(0,0,0,0.10);
+}

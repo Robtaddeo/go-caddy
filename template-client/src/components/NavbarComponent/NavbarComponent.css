@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    height: 12vh;
+    box-shadow: 0 1px 3px rgba(0,0,0,0), 0 1px 2px rgba(0,0,0,0.10);
+}
+#basic-navbar-nav {
+    justify-content: center;
+}
+
+.link-item, .dropdown, .nav-item {
+    color: rgb(119,119,119);
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 10px;
+}
+
+.nav-btn {
+    color: white;
+    background-color: #d9b753;
+    text-transform: uppercase;
+    margin: 0px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px 30px 12px 30px;
+}

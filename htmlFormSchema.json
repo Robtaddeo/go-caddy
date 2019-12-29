@@ -1,0 +1,89 @@
+{
+    "form": {
+        "navbar": {
+            "links": [{
+                    "name": "Home",
+                    "path": "/"
+                },
+                {
+                    "name": "Golf",
+                    "path": "/golf"
+                },
+                {
+                    "name": "Membership",
+                    "path": "/memberships"
+                },
+                {
+                    "name": "Weddings",
+                    "path": "/weddings"
+                },
+                {
+                    "name": "Private Events",
+                    "path": "/private-events"
+                },
+                {
+                    "name": "Features",
+                    "children": [{
+                            "name": "Pages",
+                            "path": "/features/pages"
+                        },
+                        {
+                            "name": "Tools",
+                            "path": "/features/tools"
+                        },
+                        {
+                            "name": "Help",
+                            "path": "/features/help"
+                        }
+                    ]
+                }
+            ],
+            "logoSrc": "http://triompher.ancorathemes.com/wp-content/uploads/2017/11/logo.png"
+        },
+        "home": {
+            "carouselSlides": [
+                {
+                    "src": "http://triompher.ancorathemes.com/wp-content/uploads/2017/05/slider_3.jpg",
+                    "alt": "course",
+                    "label": "Green Fees",
+                    "subHeading": ""
+                },
+                {
+                    "src": "http://triompher.ancorathemes.com/wp-content/uploads/2017/05/slider_2.jpg",
+                    "alt": "course",
+                    "label": "Green Fees",
+                    "subHeading": ""
+                },
+                {
+                    "src": "http://triompher.ancorathemes.com/wp-content/uploads/2017/05/slider_1.jpg",
+                    "alt": "course",
+                    "label": "Green Fees",
+                    "subHeading": ""
+                }
+            ]
+        },
+        "cards": [
+            {
+                "src": "http://triompher.ancorathemes.com/wp-content/uploads/2017/04/service-6-540x542.jpg",
+                "header": "GOLF COACHING",
+                "href": "http://triompher.ancorathemes.com/services/golf-coaching/"
+            },
+            {
+                "src": "http://triompher.ancorathemes.com/wp-content/uploads/2017/04/service-7-540x542.jpg",
+                "header": "HOST A TOURNAMENT",
+                "href": "http://triompher.ancorathemes.com/services/host-a-tournament/"
+            },
+            {
+                "src": "http://triompher.ancorathemes.com/wp-content/uploads/2017/04/service-8-540x542.jpg",
+                "header": "GOLF COACHING",
+                "href": "http://triompher.ancorathemes.com/services/golf-coaching/"
+            },
+            {
+                "src": "http://triompher.ancorathemes.com/wp-content/uploads/2017/04/service-9-540x542.jpg",
+                "header": "GOLF COACHING",
+                "href": "http://triompher.ancorathemes.com/services/golf-coaching/"
+            }
+        ]
+
+    }
+}

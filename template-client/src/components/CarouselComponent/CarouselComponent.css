@@ -1,0 +1,8 @@
+.carouselItem {
+    height: 110vh;
+}
+
+.carousel-indicators {
+    display: none;
+    visibility: hidden;
+}
