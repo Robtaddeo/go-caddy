@@ -1,0 +1,30 @@
+.hero img {
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    background-color: #218c74;
+    color: white;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.hero-text {
+    position: relative;
+    top: 15vh;
+}
+
+.hero-text h1 {
+    width: 60%;
+    margin: auto;
+}
+
+.hero-text p {
+    padding-top: 50px;
+    width: 60%;
+    margin: auto;
+}

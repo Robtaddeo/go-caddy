@@ -26,25 +26,9 @@ export default class NavbarComponent extends Component {
 				{
 					name: 'Private Events',
 					path: '/private-events'
-				},
-				{
-					name: 'Features',
-					children: [
-						{
-							name: 'Pages',
-							path: '/features/pages'
-						},
-						{
-							name: 'Tools',
-							path: '/features/tools'
-						},
-						{
-							name: 'Help',
-							path: '/features/help'
-						}
-					]
 				}
 			],
+			path: '',
 			logoSrc: "http://triompher.ancorathemes.com/wp-content/uploads/2017/11/logo.png"
 		};
 	}
